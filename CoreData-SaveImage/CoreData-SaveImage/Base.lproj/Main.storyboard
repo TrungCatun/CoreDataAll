@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yTQ-vu-nL1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreData_SaveImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="lVy-HG-14U">
+                                <rect key="frame" x="20" y="166" width="335" height="335"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lVy-HG-14U" secondAttribute="height" multiplier="1:1" id="oGT-2i-Ih9"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Uec-S4-O8X" appends="YES" id="ccs-Mr-saX"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lVy-HG-14U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3sj-Gn-yVO"/>
+                            <constraint firstItem="lVy-HG-14U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="O8B-Mx-Qv2"/>
+                            <constraint firstItem="lVy-HG-14U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U6q-0T-RFJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lVy-HG-14U" secondAttribute="trailing" constant="20" id="vAK-Na-vaF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zFj-0k-41w">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="43j-DO-qTP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoImage" destination="lVy-HG-14U" id="lS2-OG-gyc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Uec-S4-O8X">
+                    <connections>
+                        <action selector="selectImageFromPhotoLabary:" destination="BYZ-38-t0r" id="0JO-tg-vvr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="804" y="-564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NG4-Yj-uBS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTQ-vu-nL1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DkD-9D-j8K">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Umg-mk-Mxt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcw-Uv-0vv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image1" width="1920" height="1080"/>
+    </resources>
+</document>
